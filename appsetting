@@ -1,0 +1,13 @@
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=(LocalDB)\\local;Integrated Security=true;TrustServerCertificate=True;Database=master;"
+    },
+
+    "AllowedHosts": "*"
+}
