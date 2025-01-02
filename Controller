@@ -1,0 +1,29 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace TestEntityProject.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class EmpController : ControllerBase
+    {
+        private readonly DataContext _context;
+
+        public EmpController(DataContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        [Route("getdata")]
+        public IActionResult Getdata()
+        {
+
+           List< Employees_details > employees_Details = new List< Employees_details>();
+
+            employees_Details = _context.Employees_details.ToList();
+
+            return Ok(employees_Details);
+        }
+    }
+}
